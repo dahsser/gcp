@@ -22,6 +22,7 @@ jobs:
       - id: deploy
         uses: google-github-actions/deploy-cloud-functions@main
         with:
+          project_id: orcebot
           name: send-email
           runtime: nodejs14
           credentials: ${{ secrets.GCP_CREDENTIALS }}

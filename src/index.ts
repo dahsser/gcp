@@ -2,5 +2,11 @@ import type {HttpFunction} from '@google-cloud/functions-framework/build/src/fun
 
 export const sendEmail: HttpFunction = (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({headers: req.headers, body: req.body}, null, 4));
+  res.send(
+    JSON.stringify(
+      {headers: req.headers, body: req.body, itWorked: true},
+      null,
+      4
+    )
+  );
 };
